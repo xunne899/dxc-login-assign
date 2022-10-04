@@ -27,7 +27,7 @@ router.post("/", async function (req, res) {
     success: async function (form) {
       const user = await User.where({
         email: form.data.email,
-        password: form.data.password,
+        password: getHashedPassword(form.data.password),
       }).fetch({
         require: false,
       });
@@ -38,7 +38,7 @@ router.post("/", async function (req, res) {
         res.redirect("/");
       } else {
         //check the password matches
-        if (user.get("password") === form.data.password && user.get("role") === "manager" ) {
+        if (user.get("password") === getHashedPassword(form.data.password) && user.get("role") === "manager" ) {
           req.session.user = {
             id: user.get("id"),
             username: user.get("username"),
@@ -48,7 +48,7 @@ router.post("/", async function (req, res) {
           res.redirect("/users");
 
         } 
-         else if (user.get("password") === form.data.password && user.get("role") == "user" ) {
+         else if (user.get("password") === getHashedPassword(form.data.password) && user.get("role") == "user" ) {
             req.session.user = {
               id: user.get("id"),
               username: user.get("username"),
