@@ -1,4 +1,23 @@
 {
+  "name": "dxc-login-assign",
+  "description": "To start mysql, in the terminal, type in `mysql -u root`",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xunne899/dxc-login-assign.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xunne899/dxc-login-assign/issues"
+  },
+  "homepage": "https://github.com/xunne899/dxc-login-assign#readme",
   "dependencies": {
     "bookshelf": "^1.2.0",
     "bootstrap": "^5.2.2",

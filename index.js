@@ -86,6 +86,6 @@ app.use(function (req, res, next) {
   next();
 });
 
-app.listen(3001, () => {
+app.listen(process.env.PORT, () => {
   console.log("Server Started");
 });
