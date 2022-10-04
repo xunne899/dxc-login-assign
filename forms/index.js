@@ -13,7 +13,7 @@ const bootstrapField = function (name, object) {
     object.widget.classes.push("form-check-input", "mb-3");
   } else {
     if (object.widget.classes.indexOf("form-control") === -1) {
-      object.widget.classes.push("form-control", "mb-3");
+      object.widget.classes.push("form-control", "mb-1");
     }
   }
 
