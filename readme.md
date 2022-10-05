@@ -1,5 +1,8 @@
 # Login-Application
 
+* A sample layout of project work in different screen size
+
+![Web_view](./public/images/loginpage.png)
 
 ### Github Repository
 - Refer to github over [here](https://github.com/xunne899/dxc-login-assign) for more details.
