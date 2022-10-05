@@ -4,6 +4,8 @@ const fields = forms.fields;
 const validators = forms.validators;
 const widgets = forms.widgets;
 
+
+//bootstrap properties
 const bootstrapField = function (name, object) {
   if (!Array.isArray(object.widget.classes)) {
     object.widget.classes = [];
@@ -30,7 +32,7 @@ const bootstrapField = function (name, object) {
   return '<div class="form-group">' + label + widget + error + "</div>";
 };
 
-
+// create user form when update staff details
 const createUserForm = () => {
     return forms.create({
       name: fields.string({
@@ -57,6 +59,8 @@ const createUserForm = () => {
     });
   };
 
+
+//create login form on login page
   const createLoginForm = () => {
     return forms.create({
       email: fields.string({
@@ -72,6 +76,8 @@ const createUserForm = () => {
     });
   };
 
+
+  // create form when register
   const createRegistrationForm = () => {
     return forms.create({
       name: fields.string({

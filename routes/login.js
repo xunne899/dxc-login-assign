@@ -53,7 +53,6 @@ router.post("/", async function (req, res) {
               id: user.get("id"),
               username: user.get("username"),
               email: user.get("email"),
-              // role_id:user.get("role_id")
             };
             res.redirect("/profile");
   

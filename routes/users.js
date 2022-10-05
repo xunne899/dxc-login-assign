@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const crypto = require("crypto");
 
+// create hashed password in database
 const getHashedPassword = (password) => {
   const sha256 = crypto.createHash("sha256");
   const hash = sha256.update(password).digest("base64");
@@ -21,15 +22,15 @@ router.get("/", checkIfAuthenticated, async (req, res) => {
   });
 });
 
+  // show the registration form
 router.get("/register", checkIfAuthenticated,(req, res) => {
-  // display the registration form
   const registerForm = createRegistrationForm();
   res.render("users/register", {
     form: registerForm.toHTML(bootstrapField),
   });
 });
 
-
+// post registration form after filling 
 router.post("/register", (req, res) => {
   const registerForm = createRegistrationForm();
   registerForm.handle(req, {
@@ -53,20 +54,25 @@ router.post("/register", (req, res) => {
   });
 });
 
+
+// get users update data
 router.get("/:user_id/update",checkIfAuthenticated, async (req, res) => {
   const user = await dataLayer.getUserById(req.params.user_id);
 
-  const userUpdateForm = createUserForm();
-
-  userUpdateForm.fields.username.value = user.get("username");
-  userUpdateForm.fields.email.value = user.get("email");
+  const UpdateForm = createUserForm();
+  UpdateForm.fields.name.value = user.get("name");
+  UpdateForm.fields.username.value = user.get("username");
+  UpdateForm.fields.email.value = user.get("email");
+  UpdateForm.fields.role.value = user.get("role");
 
   res.render("users/update", {
-    userUpdateForm: userUpdateForm.toHTML(bootstrapField),
+    UpdateForm: UpdateForm.toHTML(bootstrapField),
     user: user.toJSON(),
   });
 });
 
+
+// post amended user data
 router.post("/:user_id/update", async (req, res) => {
   const user = await dataLayer.getUserById(req.params.user_id);
   const userUpdateForm = createUserForm();
@@ -84,6 +90,8 @@ router.post("/:user_id/update", async (req, res) => {
   });
 });
 
+
+// get delete prompt
 router.get("/:user_id/delete",checkIfAuthenticated, async (req, res) => {
   const user = await dataLayer.getUserById(req.params.user_id);
 
@@ -92,6 +100,8 @@ router.get("/:user_id/delete",checkIfAuthenticated, async (req, res) => {
   });
 });
 
+
+// confirm after deleting
 router.post("/:user_id/delete", async (req, res) => {
   const user = await dataLayer.getUserById(req.params.user_id);
   await user.destroy();
@@ -99,7 +109,7 @@ router.post("/:user_id/delete", async (req, res) => {
 });
 
 
-
+// logout route
 router.get("/logout", (req, res) => {
   req.session.user = null;
   req.flash("success_messages", "Logout Successfully");
