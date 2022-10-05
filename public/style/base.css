@@ -47,6 +47,16 @@ body {
     height: 100%;
 
 }
+
+.deleteBackground{
+    background-image: url('/images/modernbuild.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+
+}
 #login-background {
     background-image: url('/images/city.jpg');
     background-repeat: no-repeat;
