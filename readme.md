@@ -18,12 +18,12 @@ Validation error will be shown when there is an incorrect login.
 
 * Users are able to change different languages based on their preferences. Langauge translate tool is located on the top right hand corner(just below navbar)
 
-## Test Account
+<!-- ## Test Account
 
 | Email              | Password |   Role  |
 | ------------------ | -------- | --------|
 | frank@gmail.com    | 123      | manager |
-| jim@gmail.com      | 123      | user    |
+| jim@gmail.com      | 123      | user    | -->
 
 ## Technology Used 
 
