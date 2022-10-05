@@ -25,7 +25,7 @@ Validation error will be shown when there is an incorrect login.
 | frank@gmail.com    | 123      | manager |
 | jim@gmail.com      | 123      | user    |
 
-## Tehnology Used 
+## Technology Used 
 
 - flash-sessions - using middleware display flash messsages
 - csurf - Cross-Site Request Forgery (CSRF) protection
