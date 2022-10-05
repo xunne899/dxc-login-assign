@@ -44,3 +44,16 @@ Validation error will be shown when there is an incorrect login.
 - React Boostrap 5.0 - accordian, cards, forms, col, rows 
 - Heroku - hosting live for backend project
 - Github & Gitpod - storing respositories/project
+
+
+## Credits and Acknowledgement
+
+[Techtalent](https://www.sunderlandsoftwarecity.com/event/tech-talent-2018/tech-talent-logo/)(web navbar logo)<br>
+[Bootstrap](https://getbootstrap.com/docs/5.0/getting-started/introduction/)( web features) <br>
+[createmockup](https://www.createmockup.com/generate/)(readme sample view layout)><br>
+[freepik](https://www.freepik.com/)(background images)<br>
+[Google Fonts](https://fonts.google.com/)(web font-family)<br>
+[DB Beaver](https://dbeaver.io/)(store table data )<br>
+[Postgress](https://www.postgresql.org/)(store table data)<br>
+[GitHub](https://github.com/)(storing of workspace)<br>
+[GitPod](https://gitpod.io/workspaces)(storing of workspace)<br>
