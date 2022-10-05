@@ -3,10 +3,10 @@
 {{#extends 'base'}}
 
 {{#block 'content'}}
-<h1 class="mt-3">Deleting Email:{{user.email}}</h1>
+<h1 class="mt-3 mx-auto">Deleting Email:{{user.email}}</h1>
 
 <form method="POST">
-    <div class="alert alert-danger" style="width:50wh">
+    <div class="alert alert-danger mx-auto" style="width:50wh">
         <p>Are you sure you want to delete email:{{user.email}}?</p>
         <input type="submit" class="btn btn-danger" value="Yes"/>
         <a href="/users" class="btn btn-success">No</a>
