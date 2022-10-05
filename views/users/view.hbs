@@ -1,9 +1,10 @@
+<div class="profileBackground">
 {{#extends 'base'}}
 
 {{#block 'content'}}
 
     <h1>Welcome to Staff Profile !</h1>
-   <div class="row mt-5" id="table">
+   <div class="row mt-5 staffTable">
    <div class=" p-3 shadow-lg rounded-5 col-12 col-md-12 col-sm-12">
    <div class="d-flex justify-content-between mt-2">
     <h1>Staff</h1> 
@@ -27,11 +28,13 @@
                 <td>{{this.username}}</td>
                 <td>{{this.email}}</td>
                 <td>{{this.role}}</td>
+                <td></td>
             </tr>
             {{/each}}
         </tbody>
     </table>
 </div>
+   </div>
    </div>
    </div>
 {{/block}}
