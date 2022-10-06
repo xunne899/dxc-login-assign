@@ -48,7 +48,7 @@ router.post("/", async function (req, res) {
           res.redirect("/users");
 
         } 
-         else if (user.get("password") === getHashedPassword(form.data.password) && user.get("role") == "user" ) {
+         else if (user.get("password") === getHashedPassword(form.data.password) && user.get("role") === "user" ) {
             req.session.user = {
               id: user.get("id"),
               username: user.get("username"),

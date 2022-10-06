@@ -48,14 +48,8 @@ app.use(function (req, res, next) {
   next();
 });
 
-const csrfInstance = csrf();
-app.use(function (req, res, next) {
-  if (req.url === "/checkout/process_payment" || req.url.slice(0, 5) == "/api/") {
-    next();
-  } else {
-    csrfInstance(req, res, next);
-  }
-});
+// enable CSRF
+app.use(csrf());
 
 app.use(function (err, req, res, next) {
   if (err && err.code === "EBADCSRFTOKEN") {

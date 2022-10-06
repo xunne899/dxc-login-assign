@@ -10,13 +10,6 @@ const User = bookshelf.model("User",{
 })
 
 
-// creates a relationship between roles and user
-// const Role = bookshelf.model('Role' , {
-//     tableName: 'roles',
-//     accounts: function(){
-//         return this.hasMany('User')
-//     }
-// })
 
 module.exports = {
     User

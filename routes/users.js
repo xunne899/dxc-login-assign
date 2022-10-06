@@ -22,6 +22,7 @@ router.get("/", checkIfAuthenticated, async (req, res) => {
   });
 });
 
+
   // show the registration form
 router.get("/register", checkIfAuthenticated,(req, res) => {
   const registerForm = createRegistrationForm();
