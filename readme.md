@@ -43,7 +43,7 @@ Validation error will be shown when there is an incorrect login.
 
 [Techtalent](https://www.sunderlandsoftwarecity.com/event/tech-talent-2018/tech-talent-logo/)(web navbar logo)<br>
 [Bootstrap](https://getbootstrap.com/docs/5.0/getting-started/introduction/)( web features) <br>
-[createmockup](https://www.createmockup.com/generate/)(readme sample view layout)><br>
+[createmockup](https://www.createmockup.com/generate/)(readme sample view layout)<br>
 [freepik](https://www.freepik.com/)(background images)<br>
 [Google Fonts](https://fonts.google.com/)(web font-family)<br>
 [DB Beaver](https://dbeaver.io/)(store table data )<br>
