@@ -1,4 +1,4 @@
-
+// database connection
 const knex = require('knex')({
   client: process.env.DB_DRIVER,
   connection: {

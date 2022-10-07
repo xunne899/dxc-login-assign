@@ -14,6 +14,7 @@ const { User } = require("../models");
 
 const { createLoginForm, bootstrapField } = require("../forms");
 
+//get log in 
 router.get("/", (req, res) => {
   const loginForm = createLoginForm();
   res.render("login/index", {
@@ -21,6 +22,7 @@ router.get("/", (req, res) => {
   });
 });
 
+//post 
 router.post("/", async function (req, res) {
   const loginForm = createLoginForm();
   loginForm.handle(req, {
