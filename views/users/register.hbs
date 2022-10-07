@@ -3,17 +3,19 @@
 {{#extends 'base'}}
 
 {{#block 'content'}}
-  <div class="row m-3 mx-auto staffTable" style="width:50vw">
+  <div class="row m-3 mx-auto staffTable" style="width:40vw">
    <div class="p-3 rounded-5 col" >
-<h1>Staff Registration</h1>
+<h2>Staff Registration</h2>
 <form method="POST">
     {{{form}}}
+    <div>
        <input type="hidden" name="_csrf" value="{{csrfToken}}"/>
-    <input type="submit" value="Register" class="btn btn-dark mt-3"/>
-    <a href="/users" class="btn btn-dark mt-3">Back</a>
-    {{/block}}
+    <input type="submit" value="Register" class="btn btn-dark btn-sm mt-3"/>
+    <a href="/users" class="btn btn-dark btn-sm mt-3">Back</a>
+    </div>
 </form>
 </div>
 </div>
 </div>
+{{/block}}
 {{/extends}}
