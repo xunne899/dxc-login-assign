@@ -17,6 +17,7 @@ Staff name, username, email and role will be shown on the staff profile page.
 Validation error will be shown when there is an incorrect login.
 
 * Users are able to change different languages based on their preferences. Langauge translate tool is located on the top right hand corner(just below navbar)
+* When logged in, users are able to logout upon clicking the black logout tab (located top right hand corner of navbar)
 
 ## Technology Used 
 
