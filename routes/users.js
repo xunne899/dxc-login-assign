@@ -15,6 +15,8 @@ const dataLayer = require("../dal/users");
 const { createRegistrationForm, createLoginForm, createUserForm, bootstrapField } = require("../forms");
 const { checkIfAuthenticated } = require("../middlewares");
 
+
+// manager route
 router.get("/", checkIfAuthenticated, async (req, res) => {
   const user = await User.collection().fetch();
   res.render("users/index", {

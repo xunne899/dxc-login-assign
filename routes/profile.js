@@ -5,7 +5,7 @@ const crypto = require("crypto");
 
 const { User } = require("../models");
 const { checkIfAuthenticated } = require("../middlewares");
-
+//user route
 router.get("/", checkIfAuthenticated, async (req, res) => {
   const user = await User.collection().fetch();
   res.render("users/view", {

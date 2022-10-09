@@ -39,7 +39,7 @@ router.post("/", async function (req, res) {
         req.flash("error_messages", "Invalid credentials. Please retry again.");
         res.redirect("/");
       } else {
-        //check the password matches
+        //check the password matches --- manager
         if (user.get("password") === getHashedPassword(form.data.password) && user.get("role") === "manager" ) {
           req.session.user = {
             id: user.get("id"),
@@ -50,6 +50,7 @@ router.post("/", async function (req, res) {
           res.redirect("/users");
 
         } 
+         //check the password matches --- user
          else if (user.get("password") === getHashedPassword(form.data.password) && user.get("role") === "user" ) {
             req.session.user = {
               id: user.get("id"),
@@ -59,7 +60,7 @@ router.post("/", async function (req, res) {
             res.redirect("/profile");
   
           } 
-        
+        // display error msg 
         else {
           req.flash("error_messages", "Invalid username or password. Please retry again.");
           res.redirect("/");
