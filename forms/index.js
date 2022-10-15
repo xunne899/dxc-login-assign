@@ -11,13 +11,11 @@ const bootstrapField = function (name, object) {
     object.widget.classes = [];
   }
 
-  if (object.widget.type == "multipleCheckbox" || object.widget.type == "multipleRadio") {
-    object.widget.classes.push("form-check-input", "mb-3");
-  } else {
+
     if (object.widget.classes.indexOf("form-control") === -1) {
       object.widget.classes.push("form-control", "mb-1");
     }
-  }
+  
 
   var validationclass = object.value && !object.error ? "is-valid" : "";
   validationclass = object.error ? "is-invalid" : validationclass;
